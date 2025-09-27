@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio</title>
@@ -12,31 +13,37 @@
 
 </head>
 <header>
-    <ul>
-        <li>about</li>
-        <li>portfolio</li>
-        <li>contact</li>
-    </ul>
+    <div class="heading">
+        <ul>
+            <li>about</li>
+            <li>portfolio</li>
+            <li>contact</li>
+        </ul>
+    </div>
 </header>
 
 <body>
-    <div class="landing">
-        <h1>I'M Erwin Scholts</h1>
-        <h2>Fourth year <br>Business administration student</br></h2>
-        <h3>Barneveld, Gelderland</h3>
-
-        <button class="contact-me">Contact me</button>
-        <button class="CV">Download me</button>
-
-        <li>
-            <ul><img src="" alt="Instagram"></ul>
-            <ul><img src="" alt="Linkedin"></ul>
-            <ul><img src="" alt="Discord"></ul>
-            <ul><img src="" alt="Whatsapp"></ul>
-            <ul><img src="" alt="Github"></ul>
-        </li>
-    </div>
-    <div class="about">
+    <section class="section-landing">
+        <div class="landing">
+            <h1>I'M <a class="orange">Erwin Scholts</a></h1>
+            <h2>Fourth year <br>Business administration student</br></h2>
+            <h3>Barneveld, Gelderland</h3>
+            <div class="button">
+                <a href="#" class="btn contact-me">Contact me</a>
+                <a href="#" class="btn CV">Download me</a>
+            </div>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.instagram.com/erwin.scholts/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/erwin-scholts-192a2b24b/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://wa.me/31657216405" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="https://github.com/cest0g" target="_blank"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        
+    </section>
+    <div class="selection about">
         <h1>About</h1>
         <p>I am a driven fourth-year Business Administration student (21) at the Christian University of Applied
             Sciences in Ede. Throughout my studies, I have developed a strong passion for optimizing business processes
@@ -49,7 +56,7 @@
         </p>
     </div>
 
-<div class="skills"> 
+<div class="selection skills"> 
     <h1>My Skills</h1>
     <div class="Excel-skills">
         <img src="" alt="">
@@ -70,7 +77,7 @@
 </div>
 
 
-<div class="experience">
+<div class="selection experience">
     <h1>Experience</h1>
     <div class="EasyWay">
         <p>Hiker</p>
@@ -86,13 +93,13 @@
     </div>
 </div>
 
-<div class="Education">
+<div class="selection Education">
     <h1>Christelijke Hogeschool Ede</h1>
     <h6>September 2022 - Today</h6>
     <p>Bedrijfskunde</p>
 </div>
 
-<div class="Languague">
+<div class="selection Languague">
     <h1>Languague</h1>
     <p>Dutch (native)</p>
     <p>English</p>
@@ -101,12 +108,12 @@
 
 
 
-<div class="Contact">
+<div class="selection Contact">
     <h1>Contact me!</h1>
     <div class="Mail">
         <p>erwinscholts@gmail.com</p>
     </div>
-    <div class="Phone">
+    <div class="selection Phone">
         <p>06-57216405</p>
     </div>
     socials
