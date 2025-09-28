@@ -4,16 +4,34 @@
     margin: 0;
     border: 0;
     scrollbar-width: none;
+
 }
+
+/* Body element */
 
 body {
     color: #fff;
     max-width: 100vw;
-    height: 100%;
     overflow-x: hidden;
+    font-size: 16px;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+
+
 }
 
 
+/* Header */
+
+ul {
+
+}
+li {
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
 body::-webkit-scrollbar {
     display: none;
 }
@@ -24,7 +42,7 @@ header {
 
 .heading {
     color: #fff;
-    height: 100px;
+    height: 10vh;
     background-color: transparent;
     align-content: center;
     text-align: center;
@@ -41,30 +59,39 @@ header {
 .selection {
     background-color: #171717
 }
+
+/* Landing page */
+
 .section-landing {
-    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-    margin-top: -100px;
+    font-size: 2em;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .landing {
-    margin: 0 auto;
-    height: 60vh;
     text-align: center;
-    color: #fff;
-    margin-top: 460px;
-        
+    color: #fff; 
+
+
 }
 
+.text {
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 900px;
+    margin-top: -10vh;
+}
 .orange {
     color: orange;
 }
-
-h3 {
-    padding-bottom: 10px;
-}
 .btn {
+    font-size: 0.5em;
     text-decoration: none;
-    border: 2px solid #fff;
+    border: 4px solid white;
     border-radius: 8px;
     padding: 5px 10px;
     background: transparent;
@@ -75,91 +102,21 @@ h3 {
 .btn:hover {
     opacity: 0.7;
 }
+.button {
+    margin-bottom: 50px;
+}
+
+.social-media {
+    margin: 0 auto;
+}
 
 .social-media ul{
+    color: #fff;
     list-style-type: none;
-    text-align: right;
+    text-align: center;
 }
 
-
-
-
-
-/* animation landingscreen */
-
-
-.stars {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  transform: rotate(-45deg);
-  pointer-events: none; /* zorgt dat sterren klikken niet blokkeren */
-  z-index: 0;
+.social-media li {
+    display: inline;
 }
 
-.star {
-  position: absolute;
-  width: 6em;   /* tail length */
-  height: 2px;  /* tail height */
-  background: linear-gradient(45deg, white, transparent);
-  border-radius: 50%;
-  filter: drop-shadow(0 0 6px white);
-  transform: translate3d(104em, 0, 0);
-  animation: fall 9s linear infinite, tail-fade 9s ease-out infinite;
-}
-
-.star::before,
-.star::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: -0.5em; /* helft van star width */
-  width: 1em;
-  height: 100%;
-  background: linear-gradient(45deg, transparent, white, transparent);
-  border-radius: inherit;
-  animation: blink 2s linear infinite;
-}
-
-.star::before { transform: rotate(45deg); }
-.star::after  { transform: rotate(-45deg); }
-
-/* Individuele sterren instellingen */
-.star:nth-child(1)  { top: 10vh; animation-duration: 7s; animation-delay: 0s; }
-.star:nth-child(2)  { top: 20vh; animation-duration: 8s; animation-delay: 1s; }
-.star:nth-child(3)  { top: 30vh; animation-duration: 9s; animation-delay: 2s; }
-.star:nth-child(4)  { top: 40vh; animation-duration: 10s; animation-delay: 3s; }
-.star:nth-child(5)  { top: 50vh; animation-duration: 8.5s; animation-delay: 0.5s; }
-.star:nth-child(6)  { top: 15vh; animation-duration: 9.2s; animation-delay: 2.3s; }
-.star:nth-child(7)  { top: 60vh; animation-duration: 7.8s; animation-delay: 1.7s; }
-.star:nth-child(8)  { top: 70vh; animation-duration: 9.5s; animation-delay: 2.8s; }
-.star:nth-child(9)  { top: 25vh; animation-duration: 8.2s; animation-delay: 1.2s; }
-.star:nth-child(10) { top: 35vh; animation-duration: 9.1s; animation-delay: 0.9s; }
-.star:nth-child(11) { top: 45vh; animation-duration: 7.5s; animation-delay: 2.0s; }
-.star:nth-child(12) { top: 55vh; animation-duration: 8.8s; animation-delay: 1.3s; }
-.star:nth-child(13) { top: 65vh; animation-duration: 9.3s; animation-delay: 2.5s; }
-.star:nth-child(14) { top: 75vh; animation-duration: 7.9s; animation-delay: 1.8s; }
-.star:nth-child(15) { top: 5vh;  animation-duration: 8.7s; animation-delay: 0.7s; }
-.star:nth-child(16) { top: 80vh; animation-duration: 9.0s; animation-delay: 2.2s; }
-.star:nth-child(17) { top: 90vh; animation-duration: 8.1s; animation-delay: 1.1s; }
-.star:nth-child(18) { top: 12vh; animation-duration: 9.4s; animation-delay: 2.6s; }
-.star:nth-child(19) { top: 28vh; animation-duration: 8.3s; animation-delay: 1.5s; }
-.star:nth-child(20) { top: 38vh; animation-duration: 9.2s; animation-delay: 2.0s; }
-
-/* Animaties */
-@keyframes fall {
-  0%   { transform: translate3d(104em, 0, 0); }
-  100% { transform: translate3d(-30em, 0, 0); }
-}
-
-@keyframes tail-fade {
-  0%, 50% { width: 6em; opacity: 1; }
-  70%, 80% { width: 0; opacity: 0.4; }
-  100%    { width: 0; opacity: 0; }
-}
-
-@keyframes blink {
-  50% { opacity: 0.6; }
-}
