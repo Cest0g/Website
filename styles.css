@@ -91,6 +91,7 @@ a {
     width: 100%;
     background: black;
     color: #fff;
+    align-content: center;
 
 
 }
@@ -164,7 +165,6 @@ a {
     height: 100%;
     min-height: 50vh;
     justify-items: left;
-    align-content: center;
 }
 
 
@@ -189,28 +189,44 @@ a {
     text-align: center;    
 }
 
-/* Experience */
+/* Experience/Education */
+
+
 
 .timeline {
     margin: 0 auto;
-    padding-top: 50px;
     width: fit-content;
+    height: 90vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    
 }
+/* 
 .timeline ul {
     border-left: 2px solid gray;
-    
     list-style-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 10 10'><circle cx='3' cy='3' r='3' fill='%23fff'/></svg>");
-
-
+    list-style-position: outside;
+    padding-left: 20px;
 }
+     */
+.timeline ul {
+    border-left: 2px solid gray;
+    list-style: none; /* bullets weghalen */
+    padding-left: 0;
+    margin-left: 20px;
+}
+
+
+
+
 .timeline li {
-  margin-left: 20px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  width: 50vw;
-  height: fit-content;
-  padding: 20px;
-  margin-bottom: 10px;
+    position: relative;
+    margin-left: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 50vw;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 .timeline li:first-child {
     margin-top: 0px;
@@ -219,10 +235,61 @@ a {
     margin-bottom: 0px;
 }
 
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -30px;       /* positie van de cirkel */
+    top: 20px;         /* verticaal gecentreerd met padding */
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 2px solid gray;
+    border-radius: 50%;
+}
 .timeline h1 {
     text-align: center;
 }
 .years, .header {
-  font-size: 1.2em;
-  font-weight: bold;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Languague */
+
+
+
+.languague {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* Contact/Socials */
+
+.Contact {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+    justify-content: center;
+    
+}
+
+.social-media-contact {
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+}
+.social-media-contact p {
+    border-top: 1px solid gray;
+    margin: 0 auto;
+    width: 100vw;
+    text-align: center;
+    font-size: 0.6em;
+    padding: 3px 0px;
 }
