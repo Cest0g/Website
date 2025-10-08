@@ -45,11 +45,12 @@ a {
     top: 5vh;
     left: 50%;
     transform: translateX(-50%);
-    background: #161616;
+    background: rgb(28, 30, 32);
     border: 2px solid rgb(255, 255, 255);
     border-radius: 50px;
     padding: 10px 15px;
     opacity: 95%;
+    z-index: 100;
 }
 .heading a {
     color: #a8a6a6;
@@ -178,12 +179,42 @@ a {
     
 }
 .part-skills {
-    border: 2px solid #fff;
-    border-radius: 15%;
-    height: 20vh;
-    align-content: center;
-    width: 10vw;
-    text-align: center;    
+  position: relative;
+  border-radius: 50px;
+  padding: 1em;
+  text-align: center;
+  height: 20vh;
+  width: 10vw;
+  align-content: center;
+  background: transparent; /* binnenkant transparant */
+  z-index: 0;
+}
+
+.part-skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15%;
+  padding: 2px; /* dikte van de border */
+  background: linear-gradient(to right, orange, orangered);
+  
+  /* mask om de binnenkant transparant te maken */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  z-index: -1;
+  pointer-events: none;
+}
+
+.part-skills:hover {
+    scale: 1.1;
+    transition: scale 0.8s ease-in-out;
+}
+.part-skills::before:hover {
+    background: linear-gradient(to right, orangered, orange);
 }
 
 /* Experience/Education */
@@ -193,7 +224,7 @@ a {
     height: 90vh;
     overflow-y: scroll;
     box-sizing: border-box;
-    
+    align-content: center;
 }
 .timeline ul {
     border-left: 2px solid gray;
@@ -238,7 +269,38 @@ a {
 /* Languague */
 .languague {
     margin: 0 auto;
-    width: fit-content;
+    width: 50vw;
+    text-align: center;
+    
+}
+.lang-item {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+.lang-item p {
+    width: 7vw;
+    margin: 0;
+    text-align: left;
+}
+
+.progress {
+    flex: 1;
+    background-color: rgb(28, 30, 32);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(to right, orange, orangered) ;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
 }
 
 /* Contact/Socials */
@@ -254,16 +316,15 @@ a {
     width: fit-content;
     justify-content: center;
 }
-.social-media-contact {
+.socials {
     margin: 0 auto;
-    bottom: 0;
     width: 100%;
 }
-.social-media-contact li {
+.socials li {
     border: none;
     padding: 0;
 }
-.social-media-contact p {
+.Rights p {
     border-top: 1px solid gray;
     margin: 0 auto;
     width: 100vw;
