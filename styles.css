@@ -9,23 +9,19 @@
 }
 html, body {
     margin: 0;
-    scroll-behavior:smooth;
     scroll-snap-type: y mandatory;
-    height: 100%;
     scrollbar-width: none;
-    position: relative;
-    background: linear-gradient(55deg, #111 0%, #181818 100%);
 }
 
 /* Body element */
 body {
+    scroll-behavior: initial;
     max-width: 100vw;
     font-size: 16px;
     text-rendering: optimizeSpeed;
-}
-
-body::-webkit-scrollbar {
-    display: none;
+    height: 100%;
+    position: relative; 
+    background: linear-gradient(55deg, #111 0%, #181818 100%);
 }
 
 /* Header */
@@ -36,47 +32,10 @@ a {
     text-decoration: none;
     color: #fff;
 }
-.heading {
-    font-size: clamp(1rem, 1vw, 2rem);
-    font-weight: 600;
-    width: fit-content;
-    position: fixed;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgb(28, 30, 32);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 50px;
-    padding: 10px 15px;
-    opacity: 95%;
-    z-index: 100;
-}
-.heading a {
-    color: #a8a6a6;
-    display: block;
-    padding: 0.7rem 1.6rem;
-    background-color: transparent;
-    border-radius: 50px;
-    transition: scale 1s ease; 
-}   
-.heading a:hover {
-    opacity: 100%;
-    background: linear-gradient(to right, orangered, orange);
-    color: black;
-    scale: 1.1;  
-}
-.heading a.active {
-    background: linear-gradient(to right, orangered, orange);
-    color: black;
-    scale: 1;
-    box-shadow: 0 0 10px 5px orangered;
-}
-.heading ul {
-    display: flex;
-}
-.heading li {
-    display: inline;
-}
+
+
+
+/* General selection */
 .selection {
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -89,11 +48,8 @@ a {
 
 /* Landing page */
 .section-landing {
-    font-size: clamp(1rem, 4vw, 3.5rem);
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    font-size: clamp(0.5rem, 4vw, 3rem);
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -190,6 +146,8 @@ a {
     opacity: 1;
     background: #171717;
     transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px 5px;
+
 
 /* ::after properties */
     display: flex;
@@ -197,23 +155,24 @@ a {
     align-items: center;
 }
 .part-skills::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border-radius: inherit;
-  padding: 3px; /* border-dikte */
-  background: linear-gradient(180deg, grey, black);
-  -webkit-mask:
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 3px; /* border-dikte */
+    background: linear-gradient(180deg, grey);
+    -webkit-mask:
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: -1;
-  transition: all 0.4s ease-in-out;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px 5px;
+
 }
 .part-skills:hover {
     transform:translateY(-0.5rem);
-    transform: rotatez(7.5deg);
 }   
 .part-skills:hover::before {
     background: linear-gradient(180deg, orange, orangered);
@@ -307,32 +266,68 @@ a {
 }
 
 /* Contact/Socials */
-.Contact {
-    display: grid;
-    grid-template-rows: 1fr auto;
+.Contact h1{
+    text-align: center;
 }
-.contact {
+.container-formulier {
+    max-width: 30vw;
+    margin: 0px auto;
+    background-color: transparent;
+    border-radius: 12px;
+}
+.formulier-contact {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.formulier-contact-message {
+    padding-top: 20px;
+}
+.input-field, .message {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: fit-content;
-    justify-content: center;
+    gap: 6px;
 }
-.socials {
-    margin: 0 auto;
-    width: 100%;
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
 }
-.socials li {
+button {
+    width: 30vw;
+    margin-top: 30px;
+    padding: 10px 15px;
+    background: linear-gradient(to right, orange, orangered);
+    color: white;
     border: none;
-    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+.Rights {    
+    position: absolute;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
+    color: white;
+    background-color: rgb(29, 28, 28);
+    border-top: 1px solid gray;
 }
 .Rights p {
-    border-top: 1px solid gray;
+    height: fit-content;
     margin: 0 auto;
     width: 100vw;
     text-align: center;
-    font-size: 0.6em;
+    font-size: 0.8em;
     padding: 3px 0px;
 }
 
