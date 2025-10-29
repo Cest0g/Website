@@ -162,7 +162,12 @@
     <div class="header-contact">
         <h1>Neem contact op!</h1>
         <div class="container-formulier">
-          <form target="_blank" action="https://formsubmit.co/erwinscholts@gmail.com" method="POST">
+          <form 
+          id="contact-form"
+          action="https://formspree.io/f/xvgvoeyz" 
+          method="POST"
+          >
+
             <div class="formulier-contact">
               <div class="input-field">
                 <p>Naam</p>
@@ -176,14 +181,15 @@
         
             <div class="formulier-contact-message">
               <div class="message">
-                <p>Uw bericht</p>
+                <p>Bericht</p>
                 <textarea name="message" rows="5" placeholder="Uw bericht" required></textarea>
               </div>
               <button type="submit">Verstuur Bericht</button>
             </div>
-            <!-- <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We'll get back to you within 24 hours.">
+            <p id="form-status"></p>
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We'll get back to you within 24 hours.">
             <input type="hidden" name="_next" value="google.com">
-            <input type="hidden" name="_subject" value="Nieuw formulier!"> -->
+            <input type="hidden" name="_subject" value="Nieuw formulier!"> 
           </form>
         </div>
     </div>
@@ -192,6 +198,6 @@
 <footer class="Rights">
     <p>All rights reserved | cestog 2025</p>
 </footer>
-
+<script src="Form.js"></script>
 </body>
 </html>
