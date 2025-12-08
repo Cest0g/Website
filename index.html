@@ -1,203 +1,168 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="NL">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/portfolio.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6f4dbbf966.js" crossorigin="anonymous"></script>
 </head>
-<header>
-
-
-</header>
-
 
 <body>
+    <header class="Header">
+        <a class="logo" href="index.html">Erwin Scholts</a>
+        <nav class="NavBar">
+            <ul class="NavLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Experience">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="home" class="selection section-landing">
-        <div class="landing">
-            <div class="text">
-                <h1>I'M <a class="orange">Erwin Scholts</a></h1>
-                <h4>Fourth year <br>Business administration student</br></h4>
-                <h5>Barneveld, Gelderland</h5>
+    <section class="landing_page" id="index">
+        <div class="content_landing">
+            <div class="content_image">
+                <!-- <img src=""> -->
             </div>
-            <div class="button">
-                <a href="#contact" class="btn contact-me">Contact me</a>
-                <a href="#" class="btn CV">Download me</a>
-            </div>
-            </div>
-            <div class="social-media">
-                <ul>
-                    <li><a href="https://www.instagram.com/erwin.scholts/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/erwin-scholts-192a2b24b/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://wa.me/31657216405" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                    <li><a href="https://github.com/cest0g" target="_blank"><i class="fab fa-github"></i></a></li>
-                </ul>
-            </div>
-        
-    </div>
-    <div id="about" class="selection">
-        <div class="about">
-            <h1>About</h1>
-            <p>I am a driven fourth-year Business Administration student (21) at the Christian University of Applied
-            Sciences in Ede. Throughout my studies, I have developed a strong passion for optimizing business processes
-            and working with data analysis and data management. By combining theoretical knowledge with practical
-            experience, I have built a solid foundation to approach complex challenges and deliver effective solutions.
+            <p class="hero_landing">I do code and <br> make content about it</p>
+            <p class="hero_sub_text">I am a seasoned full-stack software engineer with over
+                8 years of professional experience, specializing in backend development.
+                My expertise lies in crafting robust and scalable SaaS-based
+                architectures on the Amazon AWS platform.</p>
+        </div>
+        <div class="content_button">
+            <a class="content_get_in_touch" href="">Get in touch</a>
+            <a class="content_cv" href="">Download CV</a>
+        </div>
+    </section>
 
-            I am eager to take the next step in my professional journey by applying my skills in a dynamic environment
-            where I can contribute to meaningful projects. My goal is to create value through data-driven insights and
-            efficient processes, while continuing to grow and develop both personally and professionally.
+    <section class="content_skills">
+        <h4>EXPERIENCE WITH</h4>
+        <div class="content_skills_tab">
+            <i class="fa fa-html5"></i>
+            <i class="fa fa-css3"></i>
+            <i class="fa fa-file-excel-o"></i>
+            <i class="fa fa-database"> </i>
+            <i class="fa fa-bar-chart"></i>
+            <i class="fab fa-python"></i>
+        </div>
+    </section>
+
+
+
+    <section class="content_projects" id="Projects">
+        <H2>PROJECTS</H2>
+        <div class="content_projects_portfolio">
+            <div class="card sql_project">
+                <img src="project1-screenshot.jpg" alt="">
+                <div class="card-content">
+                    <h3>SQL</h3>
+                    <p>Korte omschrijving van het project, rol & resultaat.</p>
+                </div>
+            </div>
+            <div class="card excel_project">
+                <img src="project1-screenshot.jpg" alt="">
+                <div class="card-content">
+                    <h3>Excel</h3>
+                    <p>Korte omschrijving van het project, rol & resultaat.</p>
+                </div>
+
+            </div>
+            <div class="card powerbi_project">
+                <img src="project1-screenshot.jpg" alt="">
+                <div class="card-content">
+                    <h3>PowerBI</h3>
+                    <p>Korte omschrijving van het project, rol & resultaat.</p>
+                </div>
+            </div>
+            <div class="card python_project">
+                <img src="project1-screenshot.jpg" alt="">
+                <div class="card-content">
+                    <h3>Python</h3>
+                    <p>Korte omschrijving van het project, rol & resultaat.</p>
+                </div>
+            </div>
+            <div class="card python_project">
+                <img src="project1-screenshot.jpg" alt="">
+                <div class="card-content">
+                    <h3>Python</h3>
+                    <p>Korte omschrijving van het project, rol & resultaat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work_experience">
+        <H2>EXPERIENCE</H2>
+        <div class="job_card">
+            <H3>JOB 1</H3>
+            <p>Periode</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquid asperiores iusto qui
+                accusantium animi mollitia voluptatem quis impedit accusamus distinctio, fugiat vel odio illo
+                praesentium itaque neque id
+                modi!
             </p>
-            
         </div>
-    </div>
-
-<div id="skills" class="selection"> 
-    <div class="skills">
-        <h1>My Skills</h1>
-        <div class="skills-top">
-            
-            <div class="Excel part-skills">
-                <img src="images/Excel.png" alt="" >
-                <p>Excel</p>
-            </div>
-            <div class="Powerbi part-skills">
-                <img src="images/powerbi.png" alt="">
-                <p>PowerBi</p>
-            </div>
-            <div class="Html part-skills">
-                <img src="images/Html.png" alt="">
-                <p>Html</p>
-            </div>
-             <div class="CSS3 part-skills">
-                <img src="images/CSS3.png" alt="">
-                <p>CSS3</p>
-            </div>
+        <div class="job_card">
+            <H3>JOB 2</H3>
+            <p>Periode</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquid asperiores iusto qui
+                accusantium animi mollitia voluptatem quis impedit accusamus distinctio, fugiat vel odio illo
+                praesentium itaque neque id
+                modi!
+            </p>
         </div>
-    </div>
-</div>
-
-
-<div id="experience" class="selection">
-    
-    <div class="experience timeline">
-        <h1>Experience</h1>
-        <ul>
-            <li>
-                <div class="years">Sept 2024 - Now</div>
-                <div class="header">Hiker, EasyWay - Parttime</div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptate nam voluptates sit illum soluta velit obcaecati vero enim qui asperiores cumque quam, quaerat, iste labore blanditiis inventore amet nesciunt!</div>
-            </li>
-            <li>
-                <div class="years">Juli 2024 - Sept 2024</div>
-                <div class="header">Mercedes-Benz NL - Temporary Contract</div>
-                <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, natus. Corporis sunt asperiores sint amet tempora provident, quam magnam, nostrum unde dolorem soluta odio eum maiores vero fugit eaque tempore?</div>
-            </li>
-            <li>
-                <div class="years">Feb 2024 - Juli 2024</div>
-                <div class="header">IJsvogel Retail - Internship</div>
-                <div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus eligendi ad sapiente perspiciatis autem? Nesciunt neque beatae cumque nemo nulla voluptatibus? Quae sequi nostrum vel. Reiciendis ipsa vitae ab laboriosam?</div>
-            </li>
-            <li>
-                <div class="years">aug 2023 - feb 2024</div>
-                <div class="header">Warehouse worker, DPD - Temporary Contract</div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde doloremque ea exercitationem illum dolorem! Dolores sequi possimus tempore sapiente expedita, corporis exercitationem dolore et, maiores eveniet eos aut accusantium mollitia!</div>
-            </li>                        
-        </ul>
-    </div>
-
-
-</div>
-
-<div id="education" class="selection Education">
-    <div class="education timeline">
-        <h1>Education</h1>
-        <ul>
-            <li>
-                <div class="years">Sept 2022 - Now</div>
-                <div class="header">Christelijke Hogeschool Ede</div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sapiente officia error consectetur explicabo rem pariatur suscipit, molestias harum maxime earum molestiae optio beatae. Vel odit eveniet aliquid exercitationem deleniti.</div>
-            </li>                      
-        </ul>
-    </div>
-</div>
-
-<div class="selection Languague">
-    
-    <div id="languague" class="languague">
-    <h1>Languague</h1>
-        <div class="lang-item">
-            <p>Dutch  </p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 100%;"></div>
-            </div>
+        <div class="job_card">
+            <H3>JOB 3</H3>
+            <p>Periode</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquid asperiores iusto qui
+                accusantium animi mollitia voluptatem quis impedit accusamus distinctio, fugiat vel odio illo
+                praesentium itaque neque id
+                modi!
+            </p>
         </div>
-
-        <div class="lang-item">
-            <p>English </p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 85%;"> </div>
-            </div>
+        <div class="job_card">
+            <H3>JOB 4</H3>
+            <p>Periode</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquid asperiores iusto qui
+                accusantium animi mollitia voluptatem quis impedit accusamus distinctio, fugiat vel odio illo
+                praesentium itaque neque id
+                modi!
+            </p>
         </div>
+    </section>
+    <!-- <div class="test"><h1>hoi</h1></div> -->
 
-        <div class="lang-item">
-            <p>German</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 60%;"></div>
+
+    <section class="content_contact">
+        <div class="inner_content_contact">
+            <h3>Contact</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, fugiat ullam, exercitationem nemo deserunt
+                nobis
+                debitis reiciendis quasi vitae at ipsa culpa fugit quas optio mollitia alias, quod aliquid doloremque.
+            </p>
+            <a href="mailto:erwinscholts@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"></i>
+                erwinscholts@gmail.com</a>
+            <div class="content_social">
+                <a href="https://www.instagram.com/erwin.scholts/" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/erwin-scholts-192a2b24b/" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://wa.me/31657216405" target="_blank" class="fa fa-whatsapp"></a>
+                <a href="https://github.com/Cest0g" target="_blank" class="fa fa-github"></a>
             </div>
+            <footer>
+                © 2025 — Mijn Portfolio
+            </footer>
         </div>
-    </div>
-</div>
+    </section>
 
-
-
-<div id="contact" class="selection Contact">
-    <div class="header-contact">
-        <h1>Neem contact op!</h1>
-        <div class="container-formulier">
-          <form 
-          id="contact-form"
-          action="https://formspree.io/f/xvgvoeyz" 
-          method="POST"
-          >
-
-            <div class="formulier-contact">
-              <div class="input-field">
-                <p>Naam</p>
-                <input type="text" name="name" placeholder="Naam" required>
-              </div>
-              <div class="input-field">
-                <p>E-mailadres</p>
-                <input type="email" name="email" placeholder="your-email@domain.com" required>
-              </div>
-            </div>
-        
-            <div class="formulier-contact-message">
-              <div class="message">
-                <p>Bericht</p>
-                <textarea name="message" rows="5" placeholder="Uw bericht" required></textarea>
-              </div>
-              <button type="submit">Verstuur Bericht</button>
-            </div>
-            <p id="form-status"></p>
-            <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We'll get back to you within 24 hours.">
-            <input type="hidden" name="_next" value="google.com">
-            <input type="hidden" name="_subject" value="Nieuw formulier!"> 
-          </form>
-        </div>
-    </div>
-</div>
-
-<footer class="Rights">
-    <p>All rights reserved | cestog 2025</p>
-</footer>
-<script src="Form.js"></script>
 </body>
+
 </html>

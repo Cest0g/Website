@@ -1,0 +1,226 @@
+
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Jouw Naam</title>
+  
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --panel:#111213;
+      --muted:#9aa0a6;
+      --accent:#ff4976;
+      --accent-2:#ffb86b;
+      --white:#eef2f5;
+      --glass: rgba(255,255,255,0.03);
+      --card: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      display:flex;
+      justify-content:center;
+      padding:36px 20px;
+    }
+    .wrap{width:100%;max-width:var(--max-width)}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{font-family:Montserrat,Inter;font-weight:700;letter-spacing:1px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
+    nav a:hover{color:var(--white)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:26px;padding:38px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px}
+    .hero-top{display:flex;flex-direction:column;align-items:center;text-align:center;padding:20px}
+    .avatar{width:110px;height:110px;border-radius:999px;display:inline-grid;place-items:center;background:conic-gradient(from 180deg at 50% 50%, #ffb86b, #ff4976);box-shadow:0 6px 30px rgba(0,0,0,0.6);}
+    .avatar img{width:82%;border-radius:999px;display:block}
+    .headline{font-family:Montserrat,Inter;font-weight:800;font-size:30px;margin:18px 0}
+    .headline .accent{color:var(--accent)}
+    .sub{max-width:720px;color:var(--muted);font-size:14px;margin:0 auto}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,0.06);background:var(--glass);color:var(--white);cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--muted)}
+
+    /* Icons row */
+    .skills{display:flex;gap:12px;justify-content:center;margin-top:18px}
+    .skill{width:44px;height:44px;border-radius:8px;background:var(--panel);display:grid;place-items:center;color:var(--muted);font-weight:700;border:1px solid rgba(255,255,255,0.02)}
+
+    /* Projects */
+    .section{margin-top:36px}
+    .section h3{font-size:16px;color:var(--accent-2);letter-spacing:1px;margin-bottom:12px;text-transform:uppercase}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.02);position:relative}
+    .card .thumb{height:140px;border-radius:8px;background:linear-gradient(120deg,#0b0b0b, rgba(255,255,255,0.02));display:flex;align-items:end;padding:12px;color:var(--white);font-weight:700}
+    .card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+    .card .meta .title{font-size:14px}
+    .card .meta .tag{font-size:12px;color:var(--muted)}
+
+    /* Experience timeline */
+    .timeline{background:transparent;padding:18px;border-radius:10px}
+    .exp-item{display:flex;gap:14px;padding:12px 0;border-top:1px solid rgba(255,255,255,0.02)}
+    .exp-item:first-child{border-top:0}
+    .logo-small{width:36px;height:36px;border-radius:8px;background:linear-gradient(90deg,#222, #111);display:grid;place-items:center;color:var(--muted)}
+    .exp-body{flex:1}
+    .exp-title{font-weight:700}
+    .exp-company{font-size:13px;color:var(--muted)}
+    .exp-date{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:36px;padding:26px 12px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media(min-width:900px){
+      .hero{grid-template-columns:1fr 420px}
+      .hero-top{text-align:left;align-items:start}
+      .avatar{justify-self:end}
+      .cta{justify-content:flex-start}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .center{display:grid;place-items:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">JouwNaam</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-top">
+          <div class="avatar" aria-hidden>
+             vervang src met jouw profielfoto 
+             
+            <img src="https://via.placeholder.com/150/ffffff/000000?text=J" alt="avatar" />
+          </div>
+
+          <h1 class="headline">I do code and<br/><span class="accent">make content about it!</span></h1>
+          <p class="sub">I am a seasoned full-stack software engineer with over 8 years of professional experience, specializing in backend development. My expertise lies in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform.</p>
+
+          <div class="cta">
+            <a class="btn" href="#contact">Get In Touch</a>
+            <a class="btn secondary" href="#">Download CV</a>
+          </div>
+
+          <div class="skills" aria-hidden>
+            <div class="skill">JS</div>
+            <div class="skill">N</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">⚛</div>
+          </div>
+        </div>
+
+
+        <aside style="padding:22px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+          <div style="background:var(--panel);padding:16px;border-radius:12px;width:100%;border:1px solid rgba(255,255,255,0.02)">
+            <strong style="display:block">Quick Stats</strong>
+            <div class="muted" style="margin-top:8px;font-size:13px">8+ years experience • SaaS • AWS • APIs</div>
+          </div>
+
+          <div style="background:var(--panel);padding:16px;border-radius:12px;width:100%;border:1px solid rgba(255,255,255,0.02)">
+            <strong style="display:block">Featured Project</strong>
+            <div class="muted" style="margin-top:8px;font-size:13px">Powerful HTML tutorial with interactive examples.</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="projects">
+        <h3>Projects</h3>
+        <div class="projects">
+          <article class="card">
+            <div class="thumb">POWER OF HTML</div>
+            <div class="meta">
+              <div class="title">HTML Tutorial</div>
+              <div class="tag">View</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">CSS MAGIC</div>
+            <div class="meta">
+              <div class="title">CSS Tutorial</div>
+              <div class="tag">View</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">JS PLAYGROUND</div>
+            <div class="meta">
+              <div class="title">Interactive snippets</div>
+              <div class="tag">View</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h3>Experience</h3>
+        <div class="timeline">
+          <div class="exp-item">
+            <div class="logo-small">G</div>
+            <div class="exp-body">
+              <div class="exp-title">Lead Software Engineer</div>
+              <div class="exp-company">Google — <span class="exp-date">Nov 2019 — Present</span></div>
+              <p class="muted" style="margin-top:8px;font-size:14px">Responsible for designing and delivering large-scale backend systems and mentoring engineering teams.</p>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="logo-small">A</div>
+            <div class="exp-body">
+              <div class="exp-title">Junior Software Engineer</div>
+              <div class="exp-company">Apple — <span class="exp-date">Jan 2016 — Dec 2017</span></div>
+              <p class="muted" style="margin-top:8px;font-size:14px">Worked on cross-platform features and contributed to performance improvements.</p>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="logo-small">M</div>
+            <div class="exp-body">
+              <div class="exp-title">Software Engineer</div>
+              <div class="exp-company">Meta — <span class="exp-date">Jan 2013 — Oct 2015</span></div>
+              <p class="muted" style="margin-top:8px;font-size:14px">Implemented scalable microservices and improved deployment pipelines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <strong>Contact</strong>
+            <div class="muted" style="margin-top:8px">your.email@example.com • Amsterdam, NL</div>
+          </div>
+
+          <div class="muted">© <span id="year"></span> JouwNaam — All rights reserved</div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Very small interactions - pas gerust aan
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+-->
