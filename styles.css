@@ -104,6 +104,7 @@ body {
     max-width: 30vw;
     color: var(--tc-lt);
     padding-top: 3vh;
+    text-align: center;
 }
 
 @media (max-width: 600px){ .hero_sub_text {
