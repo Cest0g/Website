@@ -97,7 +97,7 @@ body {
     font-weight: 900;
     text-align: center;
     place-content: center;
-    
+
 }
 
 .hero_sub_text {
@@ -107,9 +107,10 @@ body {
     text-align: center;
 }
 
-@media (max-width: 600px){ .hero_sub_text {
-    max-width: 70vw;
-} 
+@media (max-width: 600px) {
+    .hero_sub_text {
+        max-width: 70vw;
+    }
 }
 
 .content_button {
@@ -139,8 +140,11 @@ body {
 }
 
 .content_cv {
+    background-color: transparent;
     color: var(--tc);
     transition: scale, ease-in-out, 0.5s;
+    border-image: linear-gradient(135deg, var(--ac), red) 1;
+    box-sizing: border-box;
 }
 
 .content_cv:hover {
@@ -160,10 +164,9 @@ body {
     letter-spacing: 3px;
     font-size: 16px;
     padding-bottom: 5vh;
-    color: var(--tc-lt);
-    background: linear-gradient(to bottom, var(--tc), #424242);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, var(--tc), var(--card-bg));
+    background-clip: text;
+    color: transparent;
 }
 
 .content_skills_tab {
@@ -177,8 +180,8 @@ body {
     font-size: 32px;
     color: var(--tc-lt);
     background: linear-gradient(to bottom, var(--tc), #424242);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip:  text;
+    color: transparent;
 }
 
 .content_projects {
@@ -191,50 +194,83 @@ body {
     gap: 30px;
 }
 
-.content_projects h1 {
+.content_projects h2 {
     text-align: left;
+    color: var(--ac);
 }
 
 .content_projects_portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 20vw));
     gap: 30px;
     text-align: center;
 }
 
-.card {
+.kaart {
     background: var(--card-bg);
-    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px 20px 10px 20px;
+    max-width: 20vw;
+    backdrop-filter: blur(8px);
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
-    color: var(--tc-dark);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 2fr;
-    border-left: var(--ac) 2px solid;
+    color: var(--tc);
+    transition: transform 0.7s, box-shadow 0.7s;
 }
 
-.card:hover {
+.kaart_background {
+    background-image: linear-gradient(45deg, rgb(26, 25, 25), black);
+    height: 15vh;
+    width: 18vw;
+    border-radius: 5px;
+    text-align: left;
+    align-self: center;
+}
+
+.kaart_content {
+    color: var(--tc);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.tag {
+    font-size: 14px;
+    padding-bottom: 0.8vh;
+}
+
+.key {
+    font-size: 13px;
+    color: var(--tc-lt);
+    margin-top: 1px;
+}
+.kaart:nth-child(1):hover,
+.kaart:nth-child(3):hover,
+.kaart:nth-child(5):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     transform: rotatez(-2.5deg);
 }
 
-.card img {
-    width: 100%;
-    display: block;
+.kaart:nth-child(2):hover,
+.kaart:nth-child(4):hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
+    transform: rotatez(2.5deg);
+}
+.kaart:nth-child(1),
+.kaart:nth-child(3),
+.kaart:nth-child(5) {
+    border-left: var(--ac) solid 4px;
+    border-radius: 0px 10px 10px 0px;
+    
 }
 
-.card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    margin: 0 0 10px 0;
-    color: var(--tc);
-}
-
-.card-content p {
-    margin: 0;
-    color: #b0b0b0;
+.kaart:nth-child(2),
+.kaart:nth-child(4) {
+    border-right: var(--ac) solid 4px;
+    border-radius: 10px 0 0 10px;
 }
 
 .work_experience {
@@ -245,6 +281,9 @@ body {
     margin: 0 auto;
     color: var(--tc);
     gap: 30px;
+}
+.work_experience h2 {
+    color: var(--ac);
 }
 
 .job_card {
@@ -257,6 +296,7 @@ body {
     border-radius: 0 20px 20px 0px;
     border-left: 4px solid var(--ac);
     transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 50vw;
 }
 
 .job_card:nth-child(2):hover,
@@ -273,15 +313,6 @@ body {
     transform: rotatez(2.5deg);
 }
 
-/*  
-  .test {
-    background: linear-gradient(45deg, orange, red);
-    background-clip: text;   
-    color: transparent; 
-    display: inline-block; 
-  }
-*/
-
 .content_contact {
     display: flex;
     flex-direction: column;
@@ -296,6 +327,7 @@ body {
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
 .inner_content_contact {
     max-width: 50vw;
     margin: 0 auto;
@@ -303,9 +335,11 @@ body {
     flex-direction: column;
     gap: 20px;
 }
+
 .inner_content_contact h3 {
     color: var(--tc);
 }
+
 .content_contact a {
     text-decoration: none;
     color: var(--tc-lt);
