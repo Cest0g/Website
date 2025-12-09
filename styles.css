@@ -80,34 +80,35 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--tc);
-    place-items: center;
 }
 
 .content_landing {
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.content_image {
-    image-rendering: optimizeSpeed;
-}
-
-.content_image img {
-    width: 5%;
-    height: 5%;
-}
 
 .hero_landing {
+    display: flex;
     padding-top: 3vh;
     font-size: 50px;
     font-weight: 900;
     text-align: center;
+    place-content: center;
+    
 }
 
 .hero_sub_text {
     max-width: 30vw;
-    text-align: center;
     color: var(--tc-lt);
     padding-top: 3vh;
+}
+
+@media (max-width: 600px){ .hero_sub_text {
+    max-width: 70vw;
+} 
 }
 
 .content_button {
