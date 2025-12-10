@@ -189,9 +189,9 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 50vw;
-    margin: 0 auto;
     color: var(--tc);
     gap: 30px;
+    margin: 0 auto;
 }
 
 .content_projects h2 {
@@ -200,10 +200,12 @@ body {
 }
 
 .content_projects_portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 20vw));
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50vw;
     gap: 30px;
     text-align: center;
+    justify-content: center;
 }
 
 .kaart {
@@ -271,6 +273,11 @@ body {
 .kaart:nth-child(4) {
     border-right: var(--ac) solid 4px;
     border-radius: 10px 0 0 10px;
+}
+.kaart:last-child {
+    border-left: var(--ac) solid 4px;
+    border-right: var(--ac) solid 4px;
+    border-radius: 0px;
 }
 
 .work_experience {
