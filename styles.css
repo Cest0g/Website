@@ -123,10 +123,10 @@ body {
 }
 
 .content_button a {
+    border: orange solid 2px;
     text-decoration: none;
     padding: 15px 20px 15px 20px;
-    border-radius: 50px;
-    border: var(--ac), 2px, solid;
+    border-radius: 20px;
 }
 
 .content_get_in_touch {
@@ -140,11 +140,9 @@ body {
 }
 
 .content_cv {
-    background-color: transparent;
+    border-width: 2px;
     color: var(--tc);
     transition: scale, ease-in-out, 0.5s;
-    border-image: linear-gradient(135deg, var(--ac), red) 1;
-    box-sizing: border-box;
 }
 
 .content_cv:hover {
@@ -180,8 +178,14 @@ body {
     font-size: 32px;
     color: var(--tc-lt);
     background: linear-gradient(to bottom, var(--tc), #424242);
-    background-clip:  text;
+    background-clip: text;
     color: transparent;
+    transition: scale, ease-in-out, 0.5s;
+}
+
+.content_skills_tab i:hover {
+    scale: 120%;
+    color: var(--ac);
 }
 
 .content_projects {
@@ -247,9 +251,9 @@ body {
     color: var(--tc-lt);
     margin-top: 1px;
 }
+
 .kaart:nth-child(1):hover,
-.kaart:nth-child(3):hover,
-.kaart:nth-child(5):hover {
+.kaart:nth-child(3):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     transform: rotatez(-2.5deg);
@@ -261,12 +265,17 @@ body {
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     transform: rotatez(2.5deg);
 }
+
 .kaart:nth-child(1),
 .kaart:nth-child(3),
 .kaart:nth-child(5) {
     border-left: var(--ac) solid 4px;
     border-radius: 0px 10px 10px 0px;
-    
+}
+
+.kaart:last-child:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
 }
 
 .kaart:nth-child(2),
@@ -274,6 +283,7 @@ body {
     border-right: var(--ac) solid 4px;
     border-radius: 10px 0 0 10px;
 }
+
 .kaart:last-child {
     border-left: var(--ac) solid 4px;
     border-right: var(--ac) solid 4px;
@@ -289,6 +299,7 @@ body {
     color: var(--tc);
     gap: 30px;
 }
+
 .work_experience h2 {
     color: var(--ac);
 }
@@ -307,7 +318,8 @@ body {
 }
 
 .job_card:nth-child(2):hover,
-.job_card:nth-child(4):hover {
+.job_card:nth-child(4):hover,
+.job_card:nth-child(6):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     transform: rotatez(-2.5deg);
@@ -319,6 +331,7 @@ body {
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     transform: rotatez(2.5deg);
 }
+
 
 .content_contact {
     display: flex;
@@ -350,6 +363,7 @@ body {
 .content_contact a {
     text-decoration: none;
     color: var(--tc-lt);
+    transition: color ease-in-out 0.5s;
 }
 
 .content_social {
@@ -357,11 +371,21 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     color: var(--tc-lt);
+    transition: color, ease-in-out, 0.5s;
+}
+.content_contact a:hover {
+    color: var(--ac);
 }
 
 .content_social a {
     color: var(--tc);
     font-size: 1.3em;
+    transition: scale, ease-in-out, 0.5s;
+}
+
+.content_social a:hover {
+    scale: 120%;
+    color: var(--ac);
 }
 
 footer {
