@@ -6,11 +6,53 @@
 }
 
 :root {
+    --bg: #0f0f13; 
+    --hd-bg: rgba(0,0,0,0.4);
     --tc: white;
     --tc-dark: black;
     --tc-lt: rgb(197, 197, 197);
     --ac: orange;
     --card-bg: #1b1b1f;
+}
+
+.darkmode {
+    --bg: #adadb9; 
+    --hd-bg: rgba(221, 214, 214, 0.4);
+    --tc: black;
+    --tc-dark: white;
+    --tc-lt: rgb(65, 61, 61);
+    --ac: blue;
+    --card-bg: #89898d;
+}
+
+#Theme_switch {
+    height: 50px;
+    width: 50px;
+    background: var(--hd-bg);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#Theme_switch svg{
+    fill: var(--ac);
+    background: var(--hd-bg);
+}
+#Theme_switch svg:first-child{
+    display: none;
+    background: var(--hd-bg);
+}
+.darkmode #Theme_switch svg:last-child{
+    display: none;
+    background: var(--hd-bg);
+}
+.darkmode #Theme_switch svg:first-child{
+    display: block;
+    background: var(--hd-bg);
 }
 
 html,
@@ -22,7 +64,7 @@ body {
 
 /* Body element */
 body {
-    background: #0f0f13;
+    background: var(--bg);
     max-width: 100vw;
 }
 
@@ -30,7 +72,7 @@ body {
     display: flex;
     position: sticky;
     height: 7.5vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--hd-bg);
     align-items: center;
     justify-content: space-between;
     padding: 0px 40px;
@@ -57,6 +99,7 @@ body {
     display: flex;
     float: right;
     gap: 20px;
+    margin-right: 1vw;
 }
 
 .Header li {
@@ -123,10 +166,10 @@ body {
 }
 
 .content_button a {
-    border: orange solid 2px;
+    border: var(--ac) solid 2px;
     text-decoration: none;
-    padding: 15px 20px 15px 20px;
-    border-radius: 20px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
 }
 
 .content_get_in_touch {
@@ -136,7 +179,7 @@ body {
 }
 
 .content_get_in_touch:hover {
-    scale: 120%;
+    scale: 110%;
 }
 
 .content_cv {
@@ -146,7 +189,7 @@ body {
 }
 
 .content_cv:hover {
-    scale: 120%;
+    scale: 110%;
 }
 
 .content_skills {
@@ -246,9 +289,14 @@ body {
     padding-bottom: 0.8vh;
 }
 
-.key {
-    font-size: 13px;
+.key a {
+    text-decoration: none;
     color: var(--tc-lt);
+}
+
+.key {
+    text-decoration: none;
+    font-size: 13px;
     margin-top: 1px;
 }
 
@@ -256,19 +304,16 @@ body {
 .kaart:nth-child(3):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
-    transform: rotatez(-2.5deg);
 }
 
 .kaart:nth-child(2):hover,
 .kaart:nth-child(4):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
-    transform: rotatez(2.5deg);
 }
 
 .kaart:nth-child(1),
-.kaart:nth-child(3),
-.kaart:nth-child(5) {
+.kaart:nth-child(3) {
     border-left: var(--ac) solid 4px;
     border-radius: 0px 10px 10px 0px;
 }
@@ -285,10 +330,10 @@ body {
 }
 
 .kaart:last-child {
-    border-left: var(--ac) solid 4px;
-    border-right: var(--ac) solid 4px;
-    border-radius: 0px;
+    border-bottom: var(--ac) solid 4px;
+    border-radius: 10px 10px 0px 0px;
 }
+
 
 .work_experience {
     padding-top: 50px;
@@ -322,14 +367,12 @@ body {
 .job_card:nth-child(6):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
-    transform: rotatez(-2.5deg);
 }
 
 .job_card:nth-child(3):hover,
 .job_card:nth-child(5):hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
-    transform: rotatez(2.5deg);
 }
 
 

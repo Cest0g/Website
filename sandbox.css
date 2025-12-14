@@ -1,0 +1,29 @@
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html, body {
+    scrollbar-width: none;
+    max-width: 100vw;
+}
+
+.sandbox-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    height: 20vh;
+    width: 20vw;
+    background: black;
+    transition: background ease-in-out 0.3s;
+}
+.background:hover {
+    background: orange;
+}
