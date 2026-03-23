@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-/* ── TOKENS ─────────────────────────────────── */
+/* TOKENS */
 :root {
     --bg:      #0e0e0e;
     --surface: #161616;
@@ -22,7 +22,7 @@
     --radius:  16px;
 }
 
-/* ── LIGHT MODE ─────────────────────────────── */
+/* LIGHT MODE */
 body.light {
     --bg:      #f5f3ef;
     --surface: #ffffff;
@@ -46,7 +46,7 @@ body.light .mk-v     { color: var(--ink); }
 body.light .about    { background: #eceae5; }
 body.light .place-info p { color: #888; }
 
-/* ── BASE ───────────────────────────────────── */
+/* BASE */
 html { scroll-behavior: smooth; background: var(--bg); }
 
 body {
@@ -59,7 +59,7 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-/* ── NAV ────────────────────────────────────── */
+/* NAV */
 .nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -105,7 +105,7 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-cta:hover { opacity: 0.7; }
 
-/* ── COLOUR PANEL ───────────────────────────── */
+/* COLOUR PANEL */
 .colour-panel {
     position: fixed;
     bottom: 24px;
@@ -121,7 +121,7 @@ a { text-decoration: none; color: inherit; }
 }
 body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 
-/* drag handle */
+/* DRAG HANDLE */
 .cp-handle {
     display: flex;
     align-items: center;
@@ -181,7 +181,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 .mode-btn:hover { color: var(--ink); border-color: var(--muted); }
 .mode-btn.active { background: var(--red); color: #fff; border-color: var(--red); }
 
-/* ── INTRO ──────────────────────────────────── */
+/* INTRO */
 .intro {
     min-height: 100vh;
     display: flex;
@@ -243,7 +243,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 .intro-scroll:hover { color: var(--ink); gap: 16px; }
 .arrow { font-size: 18px; line-height: 1; }
 
-/* ── MARQUEE — true infinite, no gaps ───────── */
+/* MARQUEE */
 .intro-marquee {
     overflow: hidden;
     border-top: 1px solid var(--border);
@@ -279,7 +279,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
     100% { transform: translateX(-50%); }
 }
 
-/* ── WORK — BENTO GRID ──────────────────────── */
+/* WORK — BENTO GRID */
 .work {
     max-width: var(--max);
     margin: 0 auto;
@@ -374,13 +374,13 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 }
 .work-item:hover .work-arrow { color: var(--red); transform: translate(3px, -3px); }
 
-/* grid sizes */
+/* GRID SIZES */
 .w-large  { grid-column: span 6; grid-row: span 2; }
 .w-small  { grid-column: span 4; }
 .w-medium { grid-column: span 6; }
 .w-tall   { grid-column: span 2; grid-row: span 2; }
 
-/* ── PROJECT VISUALS ────────────────────────── */
+/* PROJECT VISUALS */
 .sql-vis, .py-vis {
     background: var(--raised);
     border-radius: 8px;
@@ -428,7 +428,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 }
 .mk-l { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
 
-/* Docker */
+/* DOCKER */
 .docker-vis {
     background: var(--raised);
     border-radius: 8px;
@@ -459,7 +459,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 .dc-label { font-size: 12px; font-weight: 600; color: var(--ink); }
 .dc-port  { font-size: 9px; color: var(--red); font-family: 'Courier New', monospace; }
 
-/* Browser */
+/* BROWSER */
 .fake-browser {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -483,7 +483,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 .w50 { width: 50%; }
 .w65 { width: 65%; }
 
-/* ── ABOUT ──────────────────────────────────── */
+/* ABOUT */
 .about {
     background: var(--surface);
     border-top: 1px solid var(--border);
@@ -566,7 +566,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 .tool-item i { font-size: 18px; color: var(--red); width: 22px; text-align: center; }
 .tool-item span { font-size: 14px; font-weight: 500; color: var(--ink); }
 
-/* ── CONTACT ────────────────────────────────── */
+/* CONTACT */
 .contact {
     padding: 120px var(--pad);
     max-width: var(--max);
@@ -614,7 +614,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
 }
 .clink.email:hover { background: var(--red-dim); border-color: var(--red); color: var(--red); }
 
-/* ── FOOTER ─────────────────────────────────── */
+/* FOOTER */
 .footer {
     border-top: 1px solid var(--border);
     padding: 24px var(--pad);
@@ -625,7 +625,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
     font-weight: 400;
 }
 
-/* ── RESPONSIVE ─────────────────────────────── */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .w-large  { grid-column: span 12; grid-row: span 1; }
     .w-small  { grid-column: span 6; }
@@ -640,7 +640,7 @@ body.light .colour-panel { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
     .contact { flex-direction: column; align-items: flex-start; }
 }
 
-/* ── CERTIFICATES ───────────────────────────── */
+/* CERTIFICATES */
 .certificates {
     padding: 100px var(--pad);
     background: var(--bg);
